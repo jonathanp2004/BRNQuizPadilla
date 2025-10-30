@@ -1,5 +1,6 @@
 package com.exam.brnquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,9 @@ public class IntroActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.button).setOnClickListener(v ->
+                startActivity(new Intent(this, QuizActivity.class))
+        );
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
